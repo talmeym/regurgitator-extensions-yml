@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2017 Miles Talmey.
+ * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+ */
 package com.emarte.regurgitator.extensions;
 
 import com.emarte.regurgitator.core.*;
@@ -14,13 +18,13 @@ import static com.emarte.regurgitator.extensions.YmlNamespaceLoader.loadNamespac
 public class XmlParameterYmlLoader extends XmlParameterLoader implements YmlLoader<Step> {
     private static final Log log = getLog(XmlParameter.class);
 
-	@Override
-	public Step load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
-		String xpath = loadMandatoryStr(yaml, XPATH);
-		String source = loadOptionalStr(yaml, SOURCE);
-		String value = loadOptionalStr(yaml, VALUE);
-		String file = loadOptionalStr(yaml, FILE);
-		ValueProcessor processor = loadOptionalValueProcessor(yaml, allIds);
-		return buildXmlParameter(loadId(yaml, allIds), loadPrototype(yaml), loadContext(yaml), source, value, file, processor, new XpathProcessor(xpath, loadNamespaces(yaml.getValues().get(NAMESPACES))), log);
-	}
+    @Override
+    public Step load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
+        String xpath = loadMandatoryStr(yaml, XPATH);
+        String source = loadOptionalStr(yaml, SOURCE);
+        String value = loadOptionalStr(yaml, VALUE);
+        String file = loadOptionalStr(yaml, FILE);
+        ValueProcessor processor = loadOptionalValueProcessor(yaml, allIds);
+        return buildXmlParameter(loadId(yaml, allIds), loadPrototype(yaml), loadContext(yaml), source, value, file, processor, new XpathProcessor(xpath, loadNamespaces(yaml.getValues().get(NAMESPACES))), log);
+    }
 }
