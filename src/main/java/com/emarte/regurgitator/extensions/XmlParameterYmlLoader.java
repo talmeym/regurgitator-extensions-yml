@@ -25,6 +25,6 @@ public class XmlParameterYmlLoader extends XmlParameterLoader implements YmlLoad
         String value = loadOptionalStr(yaml, VALUE);
         String file = loadOptionalStr(yaml, FILE);
         ValueProcessor processor = loadOptionalValueProcessor(yaml, allIds);
-        return buildXmlParameter(loadId(yaml, allIds), loadPrototype(yaml), loadContext(yaml), source, value, file, processor, new XpathProcessor(xpath, loadNamespaces(yaml.getValues().get(NAMESPACES))), log);
+        return buildXmlParameter(loadId(yaml, allIds), loadPrototype(yaml), loadContext(yaml), source, value, file, processor, new XpathProcessor(xpath, loadNamespaces(yaml.get(NAMESPACES))), log);
     }
 }

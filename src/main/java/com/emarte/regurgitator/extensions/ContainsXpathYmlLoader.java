@@ -21,6 +21,6 @@ public class ContainsXpathYmlLoader implements YmlLoader<ContainsXpath> {
     @Override
     public ContainsXpath load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
         log.debug("Loaded contains xpath");
-        return new ContainsXpath(loadNamespaces(yaml.getValues().get(NAMESPACES)));
+        return new ContainsXpath(loadNamespaces(yaml.get(NAMESPACES)));
     }
 }

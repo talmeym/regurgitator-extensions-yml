@@ -23,6 +23,6 @@ public class XpathProcessorYmlLoader implements YmlLoader<XpathProcessor> {
     @Override
     public XpathProcessor load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
         log.debug("Loaded xpath processor");
-        return new XpathProcessor(loadMandatoryStr(yaml, XPATH), loadNamespaces(yaml.getValues().get(NAMESPACES)));
+        return new XpathProcessor(loadMandatoryStr(yaml, XPATH), loadNamespaces(yaml.get(NAMESPACES)));
     }
 }
