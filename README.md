@@ -80,7 +80,7 @@ a velocity-builder builds from just the ``parameters`` context by default. if th
 ```yml
 velocity-builder:
  all-contexts: true
- value: "{ \"response\": \"${response_payload.text}\", \"status-code\": ${response-metadata.status_code}, \"content-type\": \"${response-metadata.content_type}\" }"
+ value: <response><payload>${response_payload.text}</payload><status-code>${response_metadata.status_code}</status-code><content-type>${response_metadata.content_type}</content-type></response>
 
 ```
 
