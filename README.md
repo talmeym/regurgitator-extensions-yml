@@ -54,7 +54,7 @@ a freemarker-builder builds from just the ``parameters`` context by default. if 
 ```yml
 freemarker-builder:
  all-contexts: true
- value: <doc><payload>${response_payload.text}</payload><status-code>${response_metadata.status_code}</status-code><content-type>${response_metadata.content_type}</content-type></doc>
+ value: <response><payload>${response_payload.text}</payload><status-code>${response_metadata.status_code}</status-code><content-type>${response_metadata.content_type}</content-type></response>
 
 ```
 
