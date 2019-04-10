@@ -6,6 +6,7 @@ package com.emarte.regurgitator.extensions;
 
 import com.emarte.regurgitator.core.*;
 
+import java.util.List;
 import java.util.Set;
 
 import static com.emarte.regurgitator.core.CoreConfigConstants.*;
@@ -22,7 +23,7 @@ public class JsonParameterYmlLoader extends JsonParameterLoader implements YmlLo
         String source = loadOptionalStr(yaml, SOURCE);
         String value = loadOptionalStr(yaml, VALUE);
         String file = loadOptionalStr(yaml, FILE);
-        ValueProcessor processor = loadOptionalValueProcessor(yaml, allIds);
-        return buildJsonParameter(loadId(yaml, allIds), loadPrototype(yaml), loadContext(yaml), source, value, file, processor, jsonPath, log);
+        List<ValueProcessor> processors = loadOptionalValueProcessors(yaml, allIds);
+        return buildJsonParameter(loadId(yaml, allIds), loadPrototype(yaml), loadContext(yaml), source, value, file, processors, jsonPath, log);
     }
 }

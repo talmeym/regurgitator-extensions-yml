@@ -4,7 +4,9 @@
  */
 package com.emarte.regurgitator.extensions;
 
-import com.emarte.regurgitator.core.*;
+import com.emarte.regurgitator.core.Log;
+import com.emarte.regurgitator.core.Yaml;
+import com.emarte.regurgitator.core.YmlLoader;
 
 import java.util.Set;
 
@@ -16,7 +18,7 @@ public class ContainsXpathYmlLoader implements YmlLoader<ContainsXpath> {
     private static final Log log = getLog(ContainsXpathYmlLoader.class);
 
     @Override
-    public ContainsXpath load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
+    public ContainsXpath load(Yaml yaml, Set<Object> allIds) {
         log.debug("Loaded contains xpath");
         return new ContainsXpath(loadNamespaces(yaml.get(NAMESPACES)));
     }

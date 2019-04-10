@@ -15,7 +15,7 @@ class YmlNamespaceLoader extends NamespaceLoader {
     private static final Log log = getLog(YmlNamespaceLoader.class);
 
     static Map<String, String> loadNamespaces(Object object) {
-        return object == null ? null : object instanceof String ? loadNamespaces((String) object, log) : loadNamespaces((Map)object);
+        return object == null ? new HashMap<String, String>() : object instanceof String ? loadNamespaces((String) object, log) : loadNamespaces((Map)object);
     }
 
     private static Map<String, String> loadNamespaces(Map values) {
