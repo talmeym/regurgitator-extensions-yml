@@ -9,6 +9,7 @@ import com.emarte.regurgitator.core.*;
 import java.util.Set;
 
 import static com.emarte.regurgitator.core.Log.getLog;
+import static com.emarte.regurgitator.core.YmlConfigUtil.loadMandatoryStr;
 import static com.emarte.regurgitator.extensions.ExtensionsConfigConstants.JSONPATH;
 
 public class JsonPathProcessorYmlLoader implements YmlLoader<JsonPathProcessor> {
@@ -17,6 +18,6 @@ public class JsonPathProcessorYmlLoader implements YmlLoader<JsonPathProcessor> 
     @Override
     public JsonPathProcessor load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
         log.debug("Loaded json path processor");
-        return new JsonPathProcessor(YmlConfigUtil.loadMandatoryStr(yaml, JSONPATH));
+        return new JsonPathProcessor(loadMandatoryStr(yaml, JSONPATH));
     }
 }
