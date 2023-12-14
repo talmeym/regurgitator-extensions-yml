@@ -8,7 +8,7 @@ start your reading here: [regurgitator-all](http://github.com/talmeym/regurgitat
 
 ### json-parameter
 
-a json-parameter creates a parameter, extracting it's value from within a json document, using json-path:
+a json-parameter creates a parameter, extracting its value from within a json document, using json-path:
 
 ```yml
 json-parameter:
@@ -19,7 +19,7 @@ json-parameter:
 
 ### xml-parameter
 
-an xml-parameter creates a parameter, extracting it's value from within an xml document, using xpath:
+an xml-parameter creates a parameter, extracting its value from within an xml document, using xpath:
 
 ```yml
 xml-parameter:
@@ -49,7 +49,7 @@ freemarker-builder:
 
 a freemarker-builder can use the same value source properties as other steps, such as ``create-parameter``, getting its template text from a source parameter, a file or an explicit value.
 
-a freemarker-builder builds from just the ``parameters`` context by default. if the ``all-contexts`` property is true, all context data is made available to the builder, with dashes replaced by underscores in context names, and the colon separating context and parameter names replaced with a period, eg. ``request-metadata:method`` becomes ``request_metadata.method`` when referenced in the template.
+a freemarker-builder builds from just the ``parameters`` context by default. if the ``all-contexts`` property is true, all context data is made available to the builder, with dashes replaced by underscores in context names, and the colon separating context and parameter names replaced with a period, e.g. ``request-metadata:method`` becomes ``request_metadata.method`` when referenced in the template.
 
 ```yml
 freemarker-builder:
@@ -75,7 +75,7 @@ velocity-builder:
 
 a velocity-builder can use the same value source properties as other steps, such as ``create-parameter``, getting its template text from a source parameter, a file or an explicit value.
 
-a velocity-builder builds from just the ``parameters`` context by default. if the ``all-contexts`` property is true, all context data is made available to the builder, with dashes replaced by underscores in context names, and the colon separating context and parameter names replaced with a period, eg. ``request-metadata:method`` becomes ``request_metadata.method`` when referenced in the template.
+a velocity-builder builds from just the ``parameters`` context by default. if the ``all-contexts`` property is true, all context data is made available to the builder, with dashes replaced by underscores in context names, and the colon separating context and parameter names replaced with a period, e.g. ``request-metadata:method`` becomes ``request_metadata.method`` when referenced in the template.
 
 ```yml
 velocity-builder:
@@ -111,7 +111,7 @@ create-parameter:
    namespaces: cat=http://catalogues.com,bk=http://books.com
 ```
 
-namespaces for an xpath-processor can also be declared as a object property of the processor:
+namespaces for an xpath-processor can also be declared as an object property of the processor:
 
 ```yml
 create-parameter:
