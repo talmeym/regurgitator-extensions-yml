@@ -39,10 +39,14 @@ a freemarker-builder aggregates parameter values together using a freemarker tem
 ```yml
 freemarker-builder:
  source: template-param
+```
 
+```yml
 freemarker-builder:
  file: classpath:/template.ftl
+```
 
+```yml
 freemarker-builder:
  value: This is a ${descriptive} day
 ```
@@ -65,10 +69,14 @@ a freemarker-builder aggregates parameter values together using a freemarker tem
 ```yml
 velocity-builder:
  source: template-param
+```
 
+```yml
 velocity-builder:
  file: classpath:/template.ftl
+```
 
+```yml
 velocity-builder:
  value: This is a ${descriptive} day
 ```
@@ -135,7 +143,9 @@ create-response:
  processor:
   freemarker-processor:
    file: classpath:/template.ftl
+```
 
+```yml
 create-response:
  source: unformatted-response
  processor:
@@ -155,7 +165,9 @@ create-response:
  processor:
   velocity-processor:
    file: classpath:/template.ftl
+```
 
+```yml
 create-response:
  source: unformatted-response
  processor:
