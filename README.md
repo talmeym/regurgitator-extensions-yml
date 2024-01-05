@@ -62,36 +62,6 @@ freemarker-builder:
 
 ```
 
-### velocity-builder
-
-a freemarker-builder aggregates parameter values together using a freemarker template.
-
-```yml
-velocity-builder:
- source: template-param
-```
-
-```yml
-velocity-builder:
- file: classpath:/template.ftl
-```
-
-```yml
-velocity-builder:
- value: This is a ${descriptive} day
-```
-
-a velocity-builder can use the same value source properties as other steps, such as ``create-parameter``, getting its template text from a source parameter, a file or an explicit value.
-
-a velocity-builder builds from just the ``parameters`` context by default. if the ``all-contexts`` property is true, all context data is made available to the builder, with dashes replaced by underscores in context names, and the colon separating context and parameter names replaced with a period, e.g. ``request-metadata:method`` becomes ``request_metadata.method`` when referenced in the template.
-
-```yml
-velocity-builder:
- all-contexts: true
- value: <response><payload>${response_payload.text}</payload><status-code>${response_metadata.status_code}</status-code><content-type>${response_metadata.content_type}</content-type></response>
-
-```
-
 ### json-path-processor
 
 a json-path-processor processes a parameter value, extracting a value from it using json path.
@@ -150,28 +120,6 @@ create-response:
  source: unformatted-response
  processor:
   freemarker-processor:
-   value: The response was: ${value}
-```
-
-the parameter value is made available to the template as simply ``value``. the template text can be specified in a ``value`` property or drawn in from a file.
-
-### velocity-processor
-
-a velocity-processor processes a parameter value, formatting the value using a velocity template.
-
-```yml
-create-response:
- source: unformatted-response
- processor:
-  velocity-processor:
-   file: classpath:/template.ftl
-```
-
-```yml
-create-response:
- source: unformatted-response
- processor:
-  velocity-processor:
    value: The response was: ${value}
 ```
 
