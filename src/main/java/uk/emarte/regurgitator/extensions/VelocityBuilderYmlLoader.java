@@ -2,17 +2,17 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.extensions;
+package uk.emarte.regurgitator.extensions;
 
-import com.emarte.regurgitator.core.*;
+import uk.emarte.regurgitator.core.*;
 
 import java.util.Set;
 
-import static com.emarte.regurgitator.core.CoreConfigConstants.*;
-import static com.emarte.regurgitator.core.Log.getLog;
-import static com.emarte.regurgitator.core.YmlConfigUtil.loadOptionalBool;
-import static com.emarte.regurgitator.core.YmlConfigUtil.loadOptionalStr;
-import static com.emarte.regurgitator.extensions.ExtensionsConfigConstants.ALL_CONTEXTS;
+import static uk.emarte.regurgitator.core.CoreConfigConstants.*;
+import static uk.emarte.regurgitator.core.Log.getLog;
+import static uk.emarte.regurgitator.core.YmlConfigUtil.loadOptionalBool;
+import static uk.emarte.regurgitator.core.YmlConfigUtil.loadOptionalStr;
+import static uk.emarte.regurgitator.extensions.ExtensionsConfigConstants.ALL_CONTEXTS;
 
 public class VelocityBuilderYmlLoader extends VelocityBuilderLoader implements YmlLoader<ValueBuilder> {
     private static final Log log = getLog(VelocityBuilderYmlLoader.class);
