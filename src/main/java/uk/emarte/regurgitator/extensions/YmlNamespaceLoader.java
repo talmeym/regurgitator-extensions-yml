@@ -15,11 +15,11 @@ class YmlNamespaceLoader extends NamespaceLoader {
     private static final Log log = getLog(YmlNamespaceLoader.class);
 
     static Map<String, String> loadNamespaces(Object object) {
-        return object == null ? new HashMap<String, String>() : object instanceof String ? loadNamespaces((String) object, log) : loadNamespaces((Map)object);
+        return object == null ? new HashMap<>() : object instanceof String ? loadNamespaces((String) object, log) : loadNamespaces((Map<Object, Object>) object);
     }
 
-    private static Map<String, String> loadNamespaces(Map values) {
-        Map<String, String> namespaceMap = new HashMap<String, String>();
+    private static Map<String, String> loadNamespaces(Map<Object, Object> values) {
+        Map<String, String> namespaceMap = new HashMap<>();
 
         for(Object key: values.keySet()) {
             String prefix = (String) key;
