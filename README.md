@@ -6,7 +6,7 @@ start your reading here: [regurgitator-all](https://talmeym.github.io/regurgitat
 
 read more about regurgitator in yml here: [regurgitator-core-yml](https://talmeym.github.io/regurgitator-core-yml#yml-configuration-of-regurgitator)
 
-[``apidocs``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-yml/0.1.2/)
+[``apidocs``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-yml/0.1.3/)
 
 ## extension steps in yml
 
