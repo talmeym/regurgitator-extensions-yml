@@ -14,12 +14,12 @@ import static uk.emarte.regurgitator.core.Log.getLog;
 import static uk.emarte.regurgitator.extensions.ExtensionsConfigConstants.NAMESPACES;
 import static uk.emarte.regurgitator.extensions.YmlNamespaceLoader.loadNamespaces;
 
-public class ContainsXpathYmlLoader implements YmlLoader<ContainsXpath> {
+public class ContainsXpathYmlLoader implements YmlLoader<ContainsXpathBehaviour> {
     private static final Log log = getLog(ContainsXpathYmlLoader.class);
 
     @Override
-    public ContainsXpath load(Yaml yaml, Set<Object> allIds) {
+    public ContainsXpathBehaviour load(Yaml yaml, Set<Object> allIds) {
         log.debug("Loaded contains xpath");
-        return new ContainsXpath(loadNamespaces(yaml.get(NAMESPACES)));
+        return new ContainsXpathBehaviour(loadNamespaces(yaml.get(NAMESPACES)));
     }
 }
