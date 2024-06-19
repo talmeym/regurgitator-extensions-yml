@@ -24,6 +24,6 @@ public class JsonParameterYmlLoader extends JsonParameterLoader implements YmlLo
         String value = loadOptionalStr(yaml, VALUE);
         String file = loadOptionalStr(yaml, FILE);
         List<ValueProcessor> processors = loadOptionalValueProcessors(yaml, allIds);
-        return buildJsonParameter(loadId(yaml, allIds), loadPrototype(yaml), loadContext(yaml), source, value, file, processors, jsonPath, log);
+        return buildJsonParameter(loadId(yaml, allIds), loadPrototype(yaml), loadContext(yaml), source, value, file, processors, jsonPath, loadOptionalBool(yaml, OPTIONAL), log);
     }
 }
