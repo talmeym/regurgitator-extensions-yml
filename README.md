@@ -6,8 +6,6 @@ start your reading here: [regurgitator-all](https://talmeym.github.io/regurgitat
 
 read more about regurgitator in yml here: [regurgitator-core-yml](https://talmeym.github.io/regurgitator-core-yml#yml-configuration-of-regurgitator)
 
-[``apidocs``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-yml/0.1.3/)
-
 ## extension steps in yml
 
 ### json-parameter
@@ -272,3 +270,7 @@ conditions:
 ```
 
 the examples above show both ways in which the meets-xml-schema ``condition-behaviour`` can be used, either in the short form of ``"behaviour-name" : "value"`` or with separate ``value`` and ``behaviour`` attributes.
+
+---
+
+api docs: [``0.1.3``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-yml/0.1.3/)
