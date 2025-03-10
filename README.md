@@ -273,4 +273,4 @@ the examples above show both ways in which the meets-xml-schema ``condition-beha
 
 ---
 
-api docs: [``0.1.4``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-yml/0.1.4/) [``0.1.3``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-yml/0.1.3/) [``0.1.2``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-yml/0.1.2/)
+api docs: [``0.1.4``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-yml/0.1.4/){:target="_blank"} [``0.1.3``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-yml/0.1.3/){:target="_blank"} [``0.1.2``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-yml/0.1.2/){:target="_blank"}
